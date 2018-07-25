@@ -1,0 +1,1 @@
+CREATE OR REPLACE FUNCTION RandomUUID   RETURN VARCHAR2   AS LANGUAGE JAVA   NAME 'java.util.UUID.randomUUID() return java.lang.String';

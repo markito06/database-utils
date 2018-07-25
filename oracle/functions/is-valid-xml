@@ -1,0 +1,21 @@
+create or replace function is_valid_xml(clob_param clob)
+
+return int
+
+as
+
+  scratch xmltype;
+
+begin
+
+  select XMLType(clob_param) into scratch from dual;
+
+  return 1;
+
+exception
+
+  when others then
+
+    return 0;
+
+end;
